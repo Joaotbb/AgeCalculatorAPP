@@ -1,27 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-slate-100 lg:p-0;
+}
+
+label {
+  @apply block uppercase font-bold mb-2;
+}
+
+input {
+  @apply bg-transparent border border-purple-600 w-full py-3 px-4 rounded text-3xl placeholder-slate-400 focus:ring-4 focus:ring-purple-600 transition-all duration-150 focus:border-purple-600 outline-none;
+}
+
+li {
+  @apply text-5xl italic font-bold;
 }
